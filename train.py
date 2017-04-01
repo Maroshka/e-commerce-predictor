@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from forward import forward
+import matplotlib.pyplot as plt
 
 def cost(p, y):
 	c = -np.mean(y*np.log(p)+(1-y)*np.log(1-p))
