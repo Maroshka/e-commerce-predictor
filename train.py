@@ -47,8 +47,8 @@ def train(x, y):
 		v -= alpha*derv_v(T, p, z)
 		w -= alpha*derv_w(T, p, z, v, x)
 		print "cost: ",c,", classification rate: ",r
-	plt.plot(cs)
-	plt.show()
-	plt.plot(rs)
+	legend1 = plt.plot(cs, label='costs')
+	legend2 = plt.plot(rs, label='classification rate')
+	plt.legend([legend1, legend2])
 	plt.show()
 	return w, v
